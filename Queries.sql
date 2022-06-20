@@ -1,0 +1,13 @@
+SELECT COUNT(Team) FROM teamgame WHERE PlayingSurface = 'Artificial' AND Season='2008';
+SELECT Team,OpponentScore FROM teamgame WHERE HomeOrAway = 'HOME' ORDER BY OpponentScore DESC LIMIT 3;
+CREATE TABLE temp(Value varchar(50), Total int);
+INSERT INTO temp VALUES('PointsAllowed',(SELECT SUM(PointsAllowed) FROM fantasydefensegame)),('SoloTackles',(SELECT SUM(SoloTackles) FROM fantasydefensegame)),('Sacks',(SELECT SUM(Sacks) FROM fantasydefensegame));
+SELECT * FROM temp;
+SHOW TABLES;
+CREATE TABLE Player AS SELECT Season, Team, Name, Position FROM playergamemaster;
+CREATE TABLE Scores AS SELECT Season, Team, Name, Position, PassingAttempts FROM playergamefeatures;
+SHOW TABLES;
+SELECT Player.Season, Player.Team, Player.Name,Player.Position,Scores.PassingAttempts FROM Player INNER JOIN Scores ON Player.Season=Scores.Season WHERE Scores.PassingAttempts > 1;
+SELECT Player.Season, Player.Team, Player.Name,Player.Position,Scores.PassingAttempts FROM Player INNER JOIN Scores ON Player.Team=Scores.Team WHERE Scores.PassingAttempts > 1;
+SELECT Player.Season, Player.Team, Player.Name,Player.Position,Scores.PassingAttempts FROM Player INNER JOIN Scores ON Player.Name=Scores.Name WHERE Scores.PassingAttempts > 1;
+SELECT Player.Season, Player.Team, Player.Name,Player.Position,Scores.PassingAttempts FROM Player INNER JOIN Scores ON Player.Position=Scores.Position WHERE Scores.PassingAttempts > 1;
