@@ -14,9 +14,7 @@ TABLES USED
     4. PlayerGameFeatures
 QUESTIONS
     1. What is the total number of Teams for season 2008 who played on Artificial surface (Table = TeamGame) 
-
     2. Display top 3 team which has the Maximum Opponent Score in a home game (Table = TeamGame)
-
     3. Create a table below from FantasyDefenseGame. Total is the sum of each value across the entire data set. (Table = FantasyDefenseGame)
 
 Value                    Total
@@ -24,17 +22,10 @@ Value                    Total
 PointsAllowed	    117015
 SoloTackles	    224485
 Sacks	                11877
-
-
-
-
     4. For Season 2014 and Team ARI:
         a. Create a temp table Player from PlayerGameMaster with Season, Team, Name, Position
         b. Create a temp table Scores from PlayerGameFeatures with Season, Team, Name, Position, PassingAttempts
         c. Join the two temp tables capturing all fields from Player and only Passing Attempts from Scores and show rows where Passing Attempts > 1 (Primary Key = Season, Team, Name, Position)
-
     5. What is Primary Key and Foreign Key?
-
     6. What is a Self-Join? How is it different from Cross Join?
-
     7. What is an ER Diagram?
