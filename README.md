@@ -13,4 +13,5 @@ TABLES USED (xslx file)
     3. PlayerGameMaster
     4. PlayerGameFeatures
     
-QUESTIONS (see docx file)
+Test Details (docx file):
+https://docs.google.com/document/d/19CVci09tJYlnmbelIvc9_0mvg5LYSI94V0KTSSsAjRY/edit?usp=sharing
