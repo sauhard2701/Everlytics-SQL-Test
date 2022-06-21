@@ -15,3 +15,5 @@ TABLES USED (xslx file)
     
 Test Details (docx file):
 https://docs.google.com/document/d/19CVci09tJYlnmbelIvc9_0mvg5LYSI94V0KTSSsAjRY/edit?usp=sharing
+
+All the quesries are in sql file Queries.sql
